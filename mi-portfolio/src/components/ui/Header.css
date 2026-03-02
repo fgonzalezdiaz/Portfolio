@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&family=Share+Tech+Mono&display=swap');
+
+.Header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 140px;
+    min-height: 50px;
+    padding: 10px;
+    width: 100%;
+    border-radius: 0px;
+    background: linear-gradient(to bottom, var(--bg-secondary) 70%, transparent 100%);
+    position: relative;
+    /* Position:relative para que los hijoss puedan tener posiciona absoluta */
+}
+
+.WelcomeText {
+    color: var(--text-primary);
+    font-size: 30px;
+    font-weight: bold;
+    text-align: left;
+    margin-top: 70px;
+    font-family: 'Arial', sans-serif;
+    margin-left: 25px
+}
+
+
+.InformationIcon {
+    width: 30px;
+    height: 30px;
+    color: var(--text-primary);
+
+}
+
+
+
+.BoxButtons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: auto;
+    height: auto;
+    align-self: flex-end;
+    padding: 10px;
+    background-color: var(--bg-secondary);
+    margin-top: 20px;
+    margin-right: 20px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.CommandLineIcon {
+    width: 30px;
+    height: 30px;
+    color: var(--text-primary);
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.Item {
+    background-color: var(--text-secondary);
+    color: var(--text-primary);
+    border-radius: 10px;
+    border-color: var(--text-secondary);
+    border-width: 2px;
+    border-style: solid;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+.ItemMedia{
+    align-items: center;
+}
+
+.ButtonAccordions{
+    padding: 4px;
+}

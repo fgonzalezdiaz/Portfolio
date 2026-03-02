@@ -1,0 +1,83 @@
+:root {
+  --card-bg: var(--bg-secondary, #ffffff);
+  --text-main: #333;
+  --text-muted: #555;
+  --accent-shadow: rgba(0, 0, 0, 0.1);
+}
+
+.info-card-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  
+  width: 95%;
+  max-width: 850px;
+  min-height: 220px;
+  margin: 25px auto;
+  padding: 20px;
+  
+  background-color: var(--card-bg);
+  border-radius: 16px;
+  box-shadow: 0 10px 15px -3px var(--accent-shadow), 0 4px 6px -2px var(--accent-shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto hover sutil */
+.info-card-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px var(--accent-shadow);
+}
+
+.flex-reverse {
+  flex-direction: row-reverse;
+}
+
+.info-card-image-wrapper {
+  flex: 0 0 35%; /* La imagen ocupa el 35% del ancho */
+  display: flex;
+  justify-content: center;
+}
+
+.info-card-img {
+  width: 100%;
+  height: auto;
+  max-height: 180px;
+  object-fit: cover; /* Evita que la imagen se deforme */
+  border-radius: 10px;
+}
+
+.info-card-content {
+  flex: 1;
+  text-align: left;
+}
+
+.info-card-title {
+  color: white;
+  margin-top: 0;
+  font-size: 1.25rem;
+}
+
+.info-card-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin-bottom: 0;
+}
+
+/* Adaptabilidad para móviles */
+@media (max-width: 600px) {
+  .info-card-container, .flex-reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .info-card-image-wrapper {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  .info-card-content {
+    text-align: center;
+  }
+}

@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&family=Share+Tech+Mono&display=swap');
+
+.InfoBoxXL {
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    transition: all 0.3s ease;
+
+}
+
+.InfoBoxMImg {
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 1000px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    margin: 10px auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+
+}
+
+.InfoBoxMImg:hover {
+    transform: translateY(-5px);
+}
+
+.img-InfoBoxMImg {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+.text-InfoBoxMImg {
+    width: 70%;
+    padding: 0 10px;
+    text-align: center;
+    white-space: pre-wrap;
+}
+
+.InfoBoxXLImgTitle {
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* Centra verticalmente la imagen y el texto */
+    width: 90%;
+    max-width: 800px;
+    /* Ancho fijo o max-width según prefieras */
+    min-height: 200px;
+    height: auto;
+    /* Altura fija para la tarjeta */
+    background-color: var(--bg-secondary);
+    border-radius: 12px;
+    margin: 20px auto;
+    /* Centrado horizontal */
+    overflow: hidden;
+    padding: 10px;
+    /* Para que la imagen no se salga de los bordes redondeados */
+    box-shadow: 0 4px 6px -1px var(--accent-color), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.InfoBoxXLImg {
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* Centra verticalmente la imagen y el texto */
+    width: 90%;
+    max-width: 800px;
+    /* Ancho fijo o max-width según prefieras */
+    min-height: 200px;
+    height: auto;
+    /* Altura fija para la tarjeta */
+    background-color: var(--bg-secondary);
+    border-radius: 12px;
+    margin: 20px auto;
+    /* Centrado horizontal */
+    overflow: hidden;
+    padding: 10px;
+    /* Para que la imagen no se salga de los bordes redondeados */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+
+}
+
+.InfoBoxVerticalImg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    max-width: 350px;
+    min-height: 700px;
+    height: auto;
+    background: linear-gradient(to top, var(--bg-secondary), var(--bg-primary));
+    border-radius: 12px;
+    margin: 20px auto;
+    overflow: hidden;
+    padding: 10px;
+    box-shadow: var(--bg-secondary);
+    transition: all 0.3s ease;
+    opacity: 0.9;
+}
+
+/* InfoBoxVerticalImgTitle PARA SUSTITUIR EL MAIN*/
+.InfoBoxVerticalImgTitle {
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: left;
+    /* Centra verticalmente la imagen y el texto */
+    width: 400px;
+    /* Ancho fijo o max-width según prefieras */
+    height: 450px;
+    /* Altura fija para la tarjeta */
+    background-color: var(--bg-secondary);
+    border-radius: 12px;
+    /* Centrado horizontal */
+    overflow: hidden;
+    margin-top: 20px;
+    padding: 10px;
+    /* Para que la imagen no se salga de los bordes redondeados */
+    box-shadow: 0 4px 6px -1px var(--accent-color), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.InfoBoxVerticalImgTitle:hover {
+    transform: translateY(-5px);
+}
+
+.InfoBoxVerticalImg:hover {
+    transform: translateY(-5px);
+}
+
+.InfoBoxXLImg:hover {
+    transform: translateY(-5px);
+}
+
+.InfoBoxXLImgTitle:hover {
+    transform: translateY(-5px);
+}
+
+.img-InfoBoxXL {
+    width: 250px;
+    /* La imagen ocupa la mitad izquierda */
+    height: 250px;
+    object-fit: cover;
+    /* La imagen cubre todo el espacio sin deformarse */
+    display: block;
+}
+
+.text-InfoBoxXL {
+    flex: 1;
+    /* El texto ocupa el resto del espacio usando flexbox */
+    padding: 24px;
+    font-size: 16px;
+    color: var(--text-primary);
+    text-align: left;
+    white-space: pre-wrap;
+    font-family: 'Rajdhani';
+    /* Permite usar \n para saltos de línea */
+}
+
+.text-InfoBoxVerticalImgTitle {
+    flex: 1;
+    /* El texto ocupa el resto del espacio usando flexbox */
+    padding: 24px;
+    font-size: 18px;
+    color: var(--text-primary);
+    text-align: left;
+    white-space: pre-wrap;
+    font-family: 'Rajdhani';
+    /* Permite usar \n para saltos de línea */
+}

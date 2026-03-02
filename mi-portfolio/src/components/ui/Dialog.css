@@ -1,0 +1,54 @@
+/* Dialog.css */
+
+.mi-dialogo {
+    padding: 0;
+    margin: auto;
+    /* Obliga al navegador a centrarlo si hay algún reset CSS global */
+    position: fixed;
+    /* Lo fija en la pantalla */
+    inset: 0;
+    /* Lo estira desde todos los bordes para que el margin auto lo centre */
+    border: none;
+    border-radius: 8px;
+    background-color: var(--background, #fff);
+    /* Usa tu variable de fondo si tienes */
+    color: var(--text-primary, #000);
+    /* Usa tu variable de texto si tienes */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.mi-dialogo::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+}
+
+.dialog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border-color, #eaeaea);
+}
+
+.dialog-header h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.btn-cerrar {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: var(--text-primary, #000);
+    transition: opacity 0.2s;
+}
+
+.btn-cerrar:hover {
+    opacity: 0.7;
+}
+
+.dialog-body {
+    padding: 20px;
+}

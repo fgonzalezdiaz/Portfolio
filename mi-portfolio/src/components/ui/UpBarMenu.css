@@ -1,0 +1,37 @@
+.divBarMenu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    background-color: var(--bg-secondary);
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 8px;
+    /* Optional: adds a bit of polish */
+}
+
+.UpBarMenu {
+    position: relative;
+    align-self: center;
+    justify-content: center;
+}
+
+.HomeUpBarMenu {
+    color: var(--text-primary);
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s;
+    margin: 5px;
+}
+
+.HomeUpBarMenu:hover {
+    color: var(--accent-color);
+}
+
+.NavigationMenuItem {
+    padding: 3px;
+}

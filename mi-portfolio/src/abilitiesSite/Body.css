@@ -1,0 +1,24 @@
+.div-main-posts {
+    height: 100%;
+    width: 90%;
+    display: grid;
+    place-items: center;
+    margin-top: 5%;
+    margin-left: 5%;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+
+/* ESTO SE ENCARGA DE AJUSTAR EL NUMERO DE BOXES DEPENDIENDO DEL TAMAÑO DE LA PANTALLA */
+@media (max-width: 1200px) {
+    .div-main-posts {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .div-main-posts {
+        grid-template-columns: 1fr;
+    }
+}
