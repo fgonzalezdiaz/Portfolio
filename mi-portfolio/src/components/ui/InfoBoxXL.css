@@ -1,23 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&family=Share+Tech+Mono&display=swap');
 
 .InfoBoxXL {
-    background-color: var(--bg-secondary);
+    background-color: var(--bg-card);
     color: var(--text-primary);
-    border: none;
+    border: 1px solid var(--border-color);
     padding: 10px 20px;
     border-radius: 10px;
     cursor: pointer;
     font-size: 16px;
     font-weight: bold;
     transition: all 0.3s ease;
-    transition: all 0.3s ease;
+    box-shadow: 0 4px 16px -1px var(--primary-glow), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    justify-content: center;
+}
 
+.InfoBoxXL:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px -1px var(--accent-color);
 }
 
 .InfoBoxMImg {
-    background-color: var(--bg-secondary);
+    background-color: var(--bg-card);
     color: var(--text-primary);
-    border: none;
+    border: 1px solid var(--border-color);
     padding: 10px;
     border-radius: 10px;
     cursor: pointer;
@@ -31,13 +37,12 @@
     align-items: center;
     overflow: hidden;
     margin: 10px auto;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .InfoBoxMImg:hover {
     transform: translateY(-5px);
+    box-shadow: 0 6px 20px var(--primary-glow);
 }
 
 .img-InfoBoxMImg {
@@ -59,21 +64,17 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    /* Centra verticalmente la imagen y el texto */
     width: 90%;
     max-width: 800px;
-    /* Ancho fijo o max-width según prefieras */
     min-height: 200px;
     height: auto;
-    /* Altura fija para la tarjeta */
-    background-color: var(--bg-secondary);
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
     border-radius: 12px;
     margin: 20px auto;
-    /* Centrado horizontal */
     overflow: hidden;
     padding: 10px;
-    /* Para que la imagen no se salga de los bordes redondeados */
-    box-shadow: 0 4px 6px -1px var(--accent-color), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 16px -1px var(--primary-glow), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
 }
 
 .InfoBoxXLImg {
@@ -81,22 +82,17 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    /* Centra verticalmente la imagen y el texto */
     width: 90%;
     max-width: 800px;
-    /* Ancho fijo o max-width según prefieras */
     min-height: 200px;
     height: auto;
-    /* Altura fija para la tarjeta */
-    background-color: var(--bg-secondary);
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
     border-radius: 12px;
     margin: 20px auto;
-    /* Centrado horizontal */
     overflow: hidden;
     padding: 10px;
-    /* Para que la imagen no se salga de los bordes redondeados */
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-
+    box-shadow: 0 4px 16px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
 }
 
 .InfoBoxVerticalImg {
@@ -108,12 +104,13 @@
     max-width: 350px;
     min-height: 700px;
     height: auto;
-    background: linear-gradient(to top, var(--bg-secondary), var(--bg-primary));
+    background: linear-gradient(to top, var(--bg-card), rgba(72, 75, 139, 0.35));
+    border: 1px solid var(--border-color);
     border-radius: 12px;
     margin: 20px auto;
     overflow: hidden;
     padding: 10px;
-    box-shadow: var(--bg-secondary);
+    box-shadow: 0 4px 20px rgba(72, 75, 139, 0.2);
     transition: all 0.3s ease;
     opacity: 0.9;
 }
@@ -123,29 +120,26 @@
     transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
-
     justify-content: left;
-    /* Centra verticalmente la imagen y el texto */
     width: 400px;
-    /* Ancho fijo o max-width según prefieras */
     height: 450px;
-    /* Altura fija para la tarjeta */
-    background-color: var(--bg-secondary);
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
     border-radius: 12px;
-    /* Centrado horizontal */
     overflow: hidden;
     margin-top: 20px;
     padding: 10px;
-    /* Para que la imagen no se salga de los bordes redondeados */
-    box-shadow: 0 4px 6px -1px var(--accent-color), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 16px -1px var(--primary-glow), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
 }
 
 .InfoBoxVerticalImgTitle:hover {
     transform: translateY(-5px);
+    box-shadow: 0 8px 28px var(--accent-color);
 }
 
 .InfoBoxVerticalImg:hover {
     transform: translateY(-5px);
+    opacity: 1;
 }
 
 .InfoBoxXLImg:hover {
@@ -158,33 +152,27 @@
 
 .img-InfoBoxXL {
     width: 250px;
-    /* La imagen ocupa la mitad izquierda */
     height: 250px;
     object-fit: cover;
-    /* La imagen cubre todo el espacio sin deformarse */
     display: block;
 }
 
 .text-InfoBoxXL {
     flex: 1;
-    /* El texto ocupa el resto del espacio usando flexbox */
     padding: 24px;
     font-size: 16px;
     color: var(--text-primary);
     text-align: left;
     white-space: pre-wrap;
     font-family: 'Rajdhani';
-    /* Permite usar \n para saltos de línea */
 }
 
 .text-InfoBoxVerticalImgTitle {
     flex: 1;
-    /* El texto ocupa el resto del espacio usando flexbox */
     padding: 24px;
     font-size: 18px;
     color: var(--text-primary);
     text-align: left;
     white-space: pre-wrap;
     font-family: 'Rajdhani';
-    /* Permite usar \n para saltos de línea */
 }

@@ -2,7 +2,11 @@ import './InfoBoxXL.css'
 import { Link } from 'react-router-dom'
 
 export function InfoBoxXL({ text }) {
-
+    return (
+        <div className='InfoBoxXL'>
+            <p className='text-InfoBoxXL'>{text}</p>
+        </div>
+    )
 }
 
 export function InfoBoxXLImg({ text, image }) {

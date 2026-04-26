@@ -22,8 +22,24 @@ export function PostBox({ title, imageUrl, content, link }) {
         </p>
 
         {/* Un botón opcional para 'Leer más' */}
-        <Link to={link}><button className="card-button">Read more</button></Link>
+        <Link to={link} ><button className="card-button">Read more</button></Link>
       </div>
     </article>
   );
 }
+
+export function PostBoxSimple({ title, imageUrl, link}) {
+    return (
+      <Link to={link} target="_blank" rel="noopener noreferrer">
+        <article className="card">      
+          <div style={{padding: "5%", alignItems: "center", display: "flex", flexDirection: "column"}}>
+            <img
+              src={imageUrl}
+              alt={title}
+              className="card-image"
+            />
+          </div>
+        </article>
+      </Link>
+    );
+  }

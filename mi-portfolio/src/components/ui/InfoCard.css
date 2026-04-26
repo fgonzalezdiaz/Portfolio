@@ -1,8 +1,8 @@
 :root {
-  --card-bg: var(--bg-secondary, #ffffff);
-  --text-main: #333;
-  --text-muted: #555;
-  --accent-shadow: rgba(0, 0, 0, 0.1);
+  --card-bg: var(--bg-card, rgba(45, 48, 108, 0.45));
+  --text-main: var(--text-primary, #f1f5f9);
+  --text-muted: var(--text-secondary, rgba(255,255,255,0.6));
+  --accent-shadow: rgba(72, 75, 139, 0.3);
 }
 
 .info-card-container {
@@ -18,12 +18,12 @@
   padding: 20px;
   
   background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
   border-radius: 16px;
-  box-shadow: 0 10px 15px -3px var(--accent-shadow), 0 4px 6px -2px var(--accent-shadow);
+  box-shadow: 0 10px 15px -3px var(--accent-shadow), 0 4px 6px -2px rgba(0,0,0,0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Efecto hover sutil */
 .info-card-container:hover {
   transform: translateY(-5px);
   box-shadow: 0 20px 25px -5px var(--accent-shadow);
@@ -34,7 +34,7 @@
 }
 
 .info-card-image-wrapper {
-  flex: 0 0 35%; /* La imagen ocupa el 35% del ancho */
+  flex: 0 0 35%;
   display: flex;
   justify-content: center;
 }
@@ -43,7 +43,7 @@
   width: 100%;
   height: auto;
   max-height: 180px;
-  object-fit: cover; /* Evita que la imagen se deforme */
+  object-fit: cover;
   border-radius: 10px;
 }
 
@@ -53,7 +53,7 @@
 }
 
 .info-card-title {
-  color: white;
+  color: var(--text-primary);
   margin-top: 0;
   font-size: 1.25rem;
 }
@@ -61,11 +61,10 @@
 .info-card-text {
   font-size: 1rem;
   line-height: 1.6;
-  color: var(--text-muted);
+  color: var(--text-secondary);
   margin-bottom: 0;
 }
 
-/* Adaptabilidad para móviles */
 @media (max-width: 600px) {
   .info-card-container, .flex-reverse {
     flex-direction: column;

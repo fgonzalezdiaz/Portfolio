@@ -5,13 +5,14 @@
     width: auto;
     height: auto;
     padding: 10px;
-    background-color: var(--bg-secondary);
+    background-color: rgba(72, 75, 139, 0.3);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    backdrop-filter: blur(8px);
     position: absolute;
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
-    border-radius: 8px;
-    /* Optional: adds a bit of polish */
 }
 
 .UpBarMenu {
@@ -29,7 +30,8 @@
 }
 
 .HomeUpBarMenu:hover {
-    color: var(--accent-color);
+    color: var(--primary-light);
+    text-shadow: 0 0 8px var(--accent-color);
 }
 
 .NavigationMenuItem {

@@ -1,0 +1,204 @@
+.posts-page {
+    min-height: 100vh;
+    background: var(--bg-primary);
+    padding: 80px;
+}
+
+.posts-header {
+    max-width: 480px;
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.posts-tag {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--accent);
+    background: var(--accent-dim);
+    border: 0.5px solid var(--accent-border);
+    border-radius: 20px;
+    padding: 4px 12px;
+    width: fit-content;
+}
+
+.posts-title {
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: var(--text-primary);
+    line-height: 1.1;
+}
+
+.posts-subtitle {
+    font-size: 15px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    gap: 16px;
+}
+
+.post-card--featured {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    align-items: center;
+    gap: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.post-card-logo-col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 36px;
+    background: rgba(167, 139, 250, 0.04);
+    border-right: 0.5px solid var(--border);
+    flex-shrink: 0;
+    min-height: 160px;
+}
+
+.post-card-content {
+    flex: 1;
+    padding: 28px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.post-card--featured .post-title {
+    font-size: 22px;
+}
+
+.post-card--coming {
+    cursor: default;
+}
+
+.post-card--coming:hover {
+    transform: none;
+    border-color: color-mix(in srgb, var(--card-accent) 40%, transparent);
+}
+
+.post-coming-badge {
+    font-size: 10px;
+    color: #1a5f8a;
+    background: rgba(26, 95, 138, 0.12);
+    border: 0.5px solid rgba(26, 95, 138, 0.3);
+    border-radius: 20px;
+    padding: 4px 12px;
+    white-space: nowrap;
+    animation: shimmer 2.5s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0.5; }
+}
+
+.post-card {
+    background: var(--bg-card);
+    border: 0.5px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    cursor: pointer;
+    transition: border-color var(--transition), transform var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Top accent line — slides in on hover */
+.post-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--card-accent, var(--accent));
+    opacity: 0;
+    transition: opacity var(--transition);
+}
+
+.post-card:hover {
+    border-color: color-mix(in srgb, var(--card-accent) 40%, transparent);
+    transform: translateY(-4px);
+}
+
+.post-card:hover::before {
+    opacity: 0.6;
+}
+
+.post-card-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.post-logo {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+}
+
+.post-arrow {
+    width: 16px;
+    height: 16px;
+    color: var(--text-muted);
+    transition: color var(--transition), transform var(--transition);
+}
+
+.post-card:hover .post-arrow {
+    color: var(--text-secondary);
+    transform: translate(2px, -2px);
+}
+
+.post-card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+}
+
+.post-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.post-subtitle-text {
+    font-size: 12px;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.post-desc {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-top: 6px;
+}
+
+.post-tags {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.post-tag {
+    font-size: 10px;
+    color: rgba(167, 139, 250, 0.7);
+    background: rgba(167, 139, 250, 0.08);
+    border-radius: 4px;
+    padding: 3px 8px;
+}

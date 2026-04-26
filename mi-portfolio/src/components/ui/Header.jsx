@@ -1,35 +1,38 @@
-import { useRef } from 'react';
-import { CommandLineIcon } from '@heroicons/react/24/outline';
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "./accordion";
-import { Item, ItemContent, ItemDescription, ItemMedia, ItemTitle, ItemActions } from "./item";
-import { AtSymbolIcon } from "@heroicons/react/24/outline"
-import { Button } from "./button"
+import { NavLink } from 'react-router-dom';
 import './Header.css';
-import { BoxButtons } from "./BoxButtons.jsx"
-
-import { UpBarMenu } from "./UpBarMenu"
-import { InformationCircleIcon } from "@heroicons/react/24/outline"
-import { CardContact } from "./CardContact"
 
 export function Header() {
     return (
-        <header className='Header'>
-            <BoxButtons />
-            <CommandLineIcon className='CommandLineIcon' />
-            <UpBarMenu className='UpBarMenu' />
+        <header className="header">
+            <NavLink to="/" className="header-logo">
+                fg.dev
+            </NavLink>
+
+            <nav className="header-links">
+                <NavLink
+                    to="/"
+                    end
+                    className={({ isActive }) => `header-link${isActive ? ' active' : ''}`}
+                >
+                    Home
+                </NavLink>
+                <NavLink
+                    to="/posts"
+                    className={({ isActive }) => `header-link${isActive ? ' active' : ''}`}
+                >
+                    Posts
+                </NavLink>
+                <NavLink
+                    to="/abilities"
+                    className={({ isActive }) => `header-link${isActive ? ' active' : ''}`}
+                >
+                    Skills
+                </NavLink>
+            </nav>
+
+            <a href="mailto:fgonzalezd24042005@gmail.com" className="header-cta">
+                Contact
+            </a>
         </header>
-    )
+    );
 }
-
-
-
-const WelcomeText = () => {
-    return (
-        <h1 className="WelcomeText">
-            Francisco <span style={{ color: 'var(--accent-color)' }}>González</span> |
-            <br />
-            Full Stack Developer Student
-        </h1>
-    )
-}
-

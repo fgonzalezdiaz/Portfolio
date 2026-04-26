@@ -1,0 +1,121 @@
+.projects-section {
+    padding: 80px 80px 60px;
+    background: var(--bg-primary);
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 40px;
+}
+
+.section-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--text-muted);
+    white-space: nowrap;
+}
+
+.section-line {
+    flex: 1;
+    height: 0.5px;
+    background: var(--border);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.proj-card {
+    background: var(--bg-card);
+    border: 0.5px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    cursor: pointer;
+    transition: border-color var(--transition), transform var(--transition);
+    transform-style: preserve-3d;
+    will-change: transform;
+}
+
+.proj-card:hover {
+    border-color: var(--card-accent, var(--accent-border));
+}
+
+.proj-card--featured {
+    border-color: var(--accent-border);
+    background: rgba(167, 139, 250, 0.03);
+}
+
+.proj-card-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.proj-icon {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+}
+
+.proj-featured-badge {
+    font-size: 10px;
+    color: var(--accent);
+    background: var(--accent-dim);
+    border: 0.5px solid var(--accent-border);
+    border-radius: 20px;
+    padding: 3px 10px;
+}
+
+.proj-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-primary);
+    line-height: 1.4;
+}
+
+.proj-desc {
+    font-size: 12px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    flex: 1;
+}
+
+.proj-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 4px;
+}
+
+.proj-tags {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.proj-tag {
+    font-size: 10px;
+    color: rgba(167, 139, 250, 0.7);
+    background: rgba(167, 139, 250, 0.08);
+    border-radius: 4px;
+    padding: 3px 8px;
+}
+
+.proj-github {
+    opacity: 0.4;
+    transition: opacity var(--transition);
+    display: flex;
+    align-items: center;
+}
+
+.proj-github:hover {
+    opacity: 1;
+}

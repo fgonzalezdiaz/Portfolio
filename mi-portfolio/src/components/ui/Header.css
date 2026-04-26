@@ -1,78 +1,60 @@
-@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&family=Share+Tech+Mono&display=swap');
-
-.Header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 140px;
-    min-height: 50px;
-    padding: 10px;
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
     width: 100%;
-    border-radius: 0px;
-    background: linear-gradient(to bottom, var(--bg-secondary) 70%, transparent 100%);
-    position: relative;
-    /* Position:relative para que los hijoss puedan tener posiciona absoluta */
-}
-
-.WelcomeText {
-    color: var(--text-primary);
-    font-size: 30px;
-    font-weight: bold;
-    text-align: left;
-    margin-top: 70px;
-    font-family: 'Arial', sans-serif;
-    margin-left: 25px
-}
-
-
-.InformationIcon {
-    width: 30px;
-    height: 30px;
-    color: var(--text-primary);
-
-}
-
-
-
-.BoxButtons {
+    padding: 14px 48px;
     display: flex;
-    flex-direction: row;
     align-items: center;
-    width: auto;
-    height: auto;
-    align-self: flex-end;
-    padding: 10px;
-    background-color: var(--bg-secondary);
-    margin-top: 20px;
-    margin-right: 20px;
-    position: absolute;
-    top: 20px;
-    right: 20px;
+    justify-content: space-between;
+    background: rgba(10, 10, 15, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 0.5px solid var(--border);
+    transition: background var(--transition);
 }
 
-.CommandLineIcon {
-    width: 30px;
-    height: 30px;
+.header-logo {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 0.08em;
+    text-decoration: none;
+}
+
+.header-links {
+    display: flex;
+    gap: 32px;
+}
+
+.header-link {
+    font-size: 13px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color var(--transition);
+}
+
+.header-link:hover {
     color: var(--text-primary);
-    margin-top: 20px;
-    margin-left: 20px;
 }
 
-.Item {
-    background-color: var(--text-secondary);
-    color: var(--text-primary);
-    border-radius: 10px;
-    border-color: var(--text-secondary);
-    border-width: 2px;
-    border-style: solid;
-    padding: 5px;
-    margin-top: 10px;
+.header-link.active {
+    color: var(--accent);
 }
 
-.ItemMedia{
-    align-items: center;
+.header-cta {
+    background: var(--accent);
+    color: var(--bg-primary);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 8px 20px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: opacity var(--transition);
 }
 
-.ButtonAccordions{
-    padding: 4px;
+.header-cta:hover {
+    opacity: 0.85;
 }

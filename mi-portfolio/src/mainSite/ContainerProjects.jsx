@@ -1,8 +1,0 @@
-
-export function ContainerProjects(){
-    return(
-        <>
-            
-        </>
-    )
-}

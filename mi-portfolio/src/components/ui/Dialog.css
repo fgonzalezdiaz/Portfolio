@@ -3,23 +3,18 @@
 .mi-dialogo {
     padding: 0;
     margin: auto;
-    /* Obliga al navegador a centrarlo si hay algún reset CSS global */
     position: fixed;
-    /* Lo fija en la pantalla */
     inset: 0;
-    /* Lo estira desde todos los bordes para que el margin auto lo centre */
-    border: none;
-    border-radius: 8px;
-    background-color: var(--background, #fff);
-    /* Usa tu variable de fondo si tienes */
-    color: var(--text-primary, #000);
-    /* Usa tu variable de texto si tienes */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    background-color: var(--bg-card);
+    color: var(--text-primary);
+    box-shadow: 0 8px 32px rgba(72, 75, 139, 0.4), 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 .mi-dialogo::backdrop {
-    background-color: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(4px);
+    background-color: rgba(27, 8, 58, 0.7);
+    backdrop-filter: blur(6px);
 }
 
 .dialog-header {
@@ -27,13 +22,14 @@
     justify-content: space-between;
     align-items: center;
     padding: 16px 20px;
-    border-bottom: 1px solid var(--border-color, #eaeaea);
+    border-bottom: 1px solid var(--border-color);
 }
 
 .dialog-header h3 {
     margin: 0;
     font-size: 1.25rem;
     font-weight: 600;
+    color: var(--text-primary);
 }
 
 .btn-cerrar {
@@ -41,12 +37,13 @@
     border: none;
     font-size: 1.2rem;
     cursor: pointer;
-    color: var(--text-primary, #000);
-    transition: opacity 0.2s;
+    color: var(--text-secondary);
+    transition: color 0.2s, opacity 0.2s;
 }
 
 .btn-cerrar:hover {
-    opacity: 0.7;
+    color: var(--text-primary);
+    opacity: 0.8;
 }
 
 .dialog-body {
