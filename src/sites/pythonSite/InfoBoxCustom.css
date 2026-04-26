@@ -174,9 +174,10 @@
     background-image: url('/github-logo.svg');
     background-size: cover;
     border-radius: 50%;
+    flex-shrink: 0;
 }
 
-/* --- Responsive (Tablets y Móviles) --- */
+/* --- Responsive: Tablets y Móviles --- */
 @media (max-width: 950px) {
     .project-wrapper {
         margin-top: 50px;
@@ -193,6 +194,7 @@
         position: static;
         margin: 0;
         height: 0;
+        flex: 0 0 0;
     }
 
     .avatar-image {
@@ -227,5 +229,41 @@
         gap: 10px;
         padding: 15px 15px;
         box-sizing: border-box;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-wrapper {
+        margin-top: 30px;
+        padding: 0 12px;
+    }
+
+    .presentation-card {
+        padding: 24px 14px;
+        border-radius: 12px;
+    }
+
+    .python-logo {
+        width: 120px;
+    }
+
+    .text-section h3 {
+        font-size: 1.1rem;
+    }
+
+    .text-section p {
+        font-size: 0.85rem;
+    }
+
+    .avatar-image {
+        min-width: 250px;
+        opacity: 0.2;
+    }
+
+    .repo-link-bar {
+        flex-direction: row;
+        padding: 12px;
+        font-size: 0.85rem;
+        gap: 8px;
     }
 }

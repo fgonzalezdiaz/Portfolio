@@ -50,10 +50,11 @@
     height: 40px;
     object-fit: contain;
     border-radius: 5px;
+    flex-shrink: 0;
 }
 
 .text-InfoBoxMImg {
-    width: 70%;
+    flex: 1;
     padding: 0 10px;
     text-align: center;
     white-space: pre-wrap;
@@ -100,9 +101,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 90%;
+    width: 100%;
     max-width: 350px;
-    min-height: 700px;
+    min-height: 500px;
     height: auto;
     background: linear-gradient(to top, var(--bg-card), rgba(72, 75, 139, 0.35));
     border: 1px solid var(--border-color);
@@ -121,8 +122,10 @@
     display: flex;
     flex-direction: column;
     justify-content: left;
-    width: 400px;
-    height: 450px;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    min-height: 350px;
     background-color: var(--bg-card);
     border: 1px solid var(--border-color);
     border-radius: 12px;
@@ -155,6 +158,7 @@
     height: 250px;
     object-fit: cover;
     display: block;
+    flex-shrink: 0;
 }
 
 .text-InfoBoxXL {
@@ -175,4 +179,89 @@
     text-align: left;
     white-space: pre-wrap;
     font-family: 'Rajdhani';
+}
+
+/* ─── Responsive: Tablet ────────────────────────────────────── */
+
+@media (max-width: 1024px) {
+    .InfoBoxXLImgTitle,
+    .InfoBoxXLImg {
+        width: 95%;
+    }
+
+    .img-InfoBoxXL {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+/* ─── Responsive: Mobile ────────────────────────────────────── */
+
+@media (max-width: 768px) {
+    .InfoBoxXLImgTitle,
+    .InfoBoxXLImg {
+        flex-direction: column;
+        width: 100%;
+        min-height: auto;
+        padding: 16px;
+    }
+
+    .img-InfoBoxXL {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto;
+    }
+
+    .text-InfoBoxXL {
+        padding: 12px 8px;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .InfoBoxVerticalImg {
+        max-width: 100%;
+        min-height: auto;
+    }
+
+    .InfoBoxVerticalImgTitle {
+        max-width: 100%;
+        min-height: auto;
+    }
+
+    .InfoBoxMImg {
+        height: auto;
+        min-height: 50px;
+        padding: 8px;
+    }
+
+    .text-InfoBoxMImg {
+        font-size: 12px;
+    }
+
+    .img-InfoBoxMImg {
+        width: 30px;
+        height: 30px;
+    }
+
+    .text-InfoBoxVerticalImgTitle {
+        padding: 12px 8px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .InfoBoxXLImgTitle,
+    .InfoBoxXLImg {
+        padding: 12px;
+    }
+
+    .img-InfoBoxXL {
+        width: 80px;
+        height: 80px;
+    }
+
+    .text-InfoBoxXL {
+        font-size: 13px;
+        padding: 10px 4px;
+    }
 }

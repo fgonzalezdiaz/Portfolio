@@ -1,8 +1,42 @@
-.div-main-java{
+.div-main-java {
     display: flex;
     flex-direction: column;
-    align-items: center;   
+    align-items: center;
     justify-content: center;
     margin-top: 20px;
+    padding: 0 20px;
+}
 
+.java-cards-row {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* ─── Responsive: Tablet ────────────────────────────────────── */
+
+@media (max-width: 1024px) {
+    .java-cards-row {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* ─── Responsive: Mobile ────────────────────────────────────── */
+
+@media (max-width: 768px) {
+    .div-main-java {
+        padding: 0 16px;
+        margin-top: 10px;
+    }
+
+    .java-cards-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
 }

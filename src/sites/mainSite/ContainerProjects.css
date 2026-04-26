@@ -119,3 +119,27 @@
 .proj-github:hover {
     opacity: 1;
 }
+
+/* ─── Responsive: Tablet ────────────────────────────────────── */
+
+@media (max-width: 1024px) {
+    .projects-section {
+        padding: 60px 40px 40px;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ─── Responsive: Mobile ────────────────────────────────────── */
+
+@media (max-width: 768px) {
+    .projects-section {
+        padding: 40px 20px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}

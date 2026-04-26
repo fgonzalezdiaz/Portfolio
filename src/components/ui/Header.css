@@ -22,7 +22,8 @@
     text-decoration: none;
 }
 
-.header-links {
+/* Desktop nav — inside header */
+.header-links--desktop {
     display: flex;
     gap: 32px;
 }
@@ -42,7 +43,7 @@
     color: var(--accent);
 }
 
-.header-cta {
+.header-cta--desktop {
     background: var(--accent);
     color: var(--bg-primary);
     font-size: 12px;
@@ -55,6 +56,116 @@
     transition: opacity var(--transition);
 }
 
-.header-cta:hover {
+.header-cta--desktop:hover {
     opacity: 0.85;
+}
+
+/* ─── Hamburger button (outside header, fixed position on mobile) ── */
+
+.header-hamburger {
+    display: none;
+    position: fixed;
+    top: 10px;
+    right: 16px;
+    z-index: 300;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.hamburger-line {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--text-primary);
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Animate to X when open */
+.hamburger-line.open:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger-line.open:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-line.open:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ─── Mobile nav overlay (outside header) ───────────────────── */
+
+.header-mobile-nav {
+    display: none;
+}
+
+.header-cta--mobile-link {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 12px 20px;
+    }
+
+    .header-hamburger {
+        display: flex;
+    }
+
+    .header-links--desktop {
+        display: none;
+    }
+
+    .header-cta--desktop {
+        display: none;
+    }
+
+    /* Mobile fullscreen nav */
+    .header-mobile-nav {
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
+        background: rgba(10, 10, 15, 1);
+        z-index: 200;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    }
+
+    .header-mobile-nav--open {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .header-mobile-nav .header-link {
+        font-size: 24px;
+        font-weight: 500;
+    }
+
+    .header-cta--mobile-link {
+        display: inline-block;
+        background: var(--accent);
+        color: var(--bg-primary);
+        font-size: 14px;
+        font-weight: 600;
+        padding: 12px 32px;
+        border-radius: 20px;
+        text-decoration: none;
+        margin-top: 8px;
+    }
 }

@@ -2,7 +2,8 @@
 .card {
   background: linear-gradient(to top, var(--bg-card), rgba(72, 75, 139, 0.35));
   border: 1px solid var(--border-color);
-  width: 350px;
+  width: 100%;
+  max-width: 350px;
   border-radius: 10px;
   overflow: hidden;
   transition: all 0.3s ease;
@@ -61,4 +62,29 @@
 .card-button:hover {
   background-color: var(--primary-light);
   box-shadow: 0 4px 12px var(--primary-glow);
+}
+
+/* ─── Responsive: Mobile ────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  .card {
+    margin: 10px auto;
+    max-width: 100%;
+  }
+
+  .card-image {
+    height: 150px;
+  }
+
+  .card-body {
+    padding: 16px;
+  }
+
+  .card-title {
+    font-size: 1.2rem;
+  }
+
+  .card-text {
+    font-size: 0.9rem;
+  }
 }

@@ -45,7 +45,47 @@
     gap: 16px;
 }
 
-.post-card--featured {
+/* ─── Base card (must come BEFORE featured override) ────────── */
+
+.post-card {
+    background: var(--bg-card);
+    border: 0.5px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    cursor: pointer;
+    transition: border-color var(--transition), transform var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Top accent line — slides in on hover */
+.post-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--card-accent, var(--accent));
+    opacity: 0;
+    transition: opacity var(--transition);
+}
+
+.post-card:hover {
+    border-color: color-mix(in srgb, var(--card-accent) 40%, transparent);
+    transform: translateY(-4px);
+}
+
+.post-card:hover::before {
+    opacity: 0.6;
+}
+
+/* ─── Featured card override ───────────────────────────────── */
+
+.post-card.post-card--featured {
     grid-column: 1 / -1;
     flex-direction: row;
     align-items: center;
@@ -102,41 +142,7 @@
     50%       { opacity: 0.5; }
 }
 
-.post-card {
-    background: var(--bg-card);
-    border: 0.5px solid var(--border);
-    border-radius: var(--radius-lg);
-    padding: 28px 24px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    cursor: pointer;
-    transition: border-color var(--transition), transform var(--transition);
-    position: relative;
-    overflow: hidden;
-}
-
-/* Top accent line — slides in on hover */
-.post-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: var(--card-accent, var(--accent));
-    opacity: 0;
-    transition: opacity var(--transition);
-}
-
-.post-card:hover {
-    border-color: color-mix(in srgb, var(--card-accent) 40%, transparent);
-    transform: translateY(-4px);
-}
-
-.post-card:hover::before {
-    opacity: 0.6;
-}
+/* ─── Card inner elements ──────────────────────────────────── */
 
 .post-card-top {
     display: flex;
@@ -201,4 +207,61 @@
     background: rgba(167, 139, 250, 0.08);
     border-radius: 4px;
     padding: 3px 8px;
+}
+
+/* ─── Responsive: Tablet ────────────────────────────────────── */
+
+@media (max-width: 1024px) {
+    .posts-page {
+        padding: 60px 40px;
+    }
+
+    .posts-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .post-card.post-card--featured {
+        grid-column: 1 / -1;
+    }
+}
+
+/* ─── Responsive: Mobile ────────────────────────────────────── */
+
+@media (max-width: 768px) {
+    .posts-page {
+        padding: 40px 20px;
+    }
+
+    .posts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .post-card.post-card--featured {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .post-card-logo-col {
+        border-right: none;
+        border-bottom: 0.5px solid var(--border);
+        padding: 24px;
+        min-height: auto;
+    }
+
+    .post-card-logo-col svg {
+        width: 80px;
+        height: 80px;
+    }
+
+    .post-card-content {
+        padding: 20px;
+    }
+
+    .post-card--featured .post-title {
+        font-size: 18px;
+    }
+
+    .posts-header {
+        margin-bottom: 40px;
+    }
 }

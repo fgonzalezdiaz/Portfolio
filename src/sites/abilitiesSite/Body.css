@@ -101,7 +101,8 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    min-width: 120px;
+    min-width: 100px;
+    flex-shrink: 0;
 }
 
 .skill-logo {
@@ -113,6 +114,7 @@
 .skill-name {
     font-size: 13px;
     color: var(--text-secondary);
+    white-space: nowrap;
 }
 
 .skill-row-right {
@@ -120,6 +122,7 @@
     align-items: center;
     gap: 10px;
     flex: 1;
+    min-width: 0;
 }
 
 /* ─── Progress bar ──────────────────────────────────────────── */
@@ -130,6 +133,7 @@
     background: var(--border);
     border-radius: 2px;
     overflow: hidden;
+    min-width: 0;
 }
 
 .skill-bar-fill {
@@ -150,4 +154,60 @@
     color: var(--text-muted);
     min-width: 28px;
     text-align: right;
+    flex-shrink: 0;
+}
+
+/* ─── Responsive: Tablet ────────────────────────────────────── */
+
+@media (max-width: 1024px) {
+    .abilities-page {
+        padding: 60px 40px;
+    }
+}
+
+/* ─── Responsive: Mobile ────────────────────────────────────── */
+
+@media (max-width: 768px) {
+    .abilities-page {
+        padding: 40px 20px;
+    }
+
+    .abilities-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .abilities-header {
+        margin-bottom: 40px;
+    }
+
+    .skill-category {
+        padding: 20px 16px;
+    }
+
+    .skill-row {
+        gap: 12px;
+    }
+
+    .skill-row-left {
+        min-width: 80px;
+    }
+
+    .skill-name {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .abilities-page {
+        padding: 32px 16px;
+    }
+
+    .skill-row-left {
+        min-width: 70px;
+        gap: 8px;
+    }
+
+    .skill-row-right {
+        gap: 8px;
+    }
 }
