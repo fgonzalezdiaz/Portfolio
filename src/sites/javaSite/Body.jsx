@@ -1,16 +1,14 @@
 import './Body.css'
-import { InfoBoxXLImg } from '../../components/ui/InfoBoxXL.jsx'
 import { InfoBoxXLImgTitle } from '../../components/ui/InfoBoxXL.jsx'
 import { InfoBoxMImg } from '../../components/ui/InfoBoxXL.jsx'
 import { Link } from 'react-router-dom'
 import { InfoBoxVerticalImg } from '../../components/ui/InfoBoxXL.jsx'
-import { LockClosedIcon } from '@heroicons/react/24/outline'
 import { InfoBoxVerticalImgTwoRepositories } from '../../components/ui/InfoBoxXL.jsx'
 export function Body() {
     return (
         <div className="div-main-java">
             <div>
-                <InfoBoxXLImgTitle title="Where I got started" text={<p>Welcome to my introductory <span style={{ color: 'var(--accent-color)' }}>Java repository!</span> This is where I wrote my <span style={{ color: 'var(--accent-color)' }}>first lines of code </span> in the language, focusing on exploring its functions and capabilities in detail. The project covers everything from <span style={{ color: 'var(--accent-color)' }}>basic</span> logic to more <span style={{ color: 'var(--accent-color)' }}>advanced </span>functional implementation</p>} image="./java-logo.svg" />
+                <InfoBoxXLImgTitle title="Where I got started" text={<p>Welcome to my introductory <span style={{ color: 'var(--accent-color)' }}>Java repository!</span> This is where I wrote my <span style={{ color: 'var(--accent-color)' }}>first lines of code </span> in the language, focusing on exploring its functions and capabilities in detail. The project covers everything from <span style={{ color: 'var(--accent-color)' }}>basic</span> logic to more <span style={{ color: 'var(--accent-color)' }}>advanced </span>functional implementation</p>} image="/java-logo.svg" />
                 <Link to="https://github.com/fgonzalezdiaz/introprg"><InfoBoxMImg text={<p>Click here to see my <span style={{ color: 'var(--accent-color)' }}>first lines of code</span> in Java</p>} image="/github-logo.svg" image2="/github-logo.svg" /></Link>
             </div>
             <div className="java-cards-row">
