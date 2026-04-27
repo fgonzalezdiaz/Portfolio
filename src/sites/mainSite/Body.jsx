@@ -1,7 +1,8 @@
-import { useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import './Body.css';
 import { Footer } from '../../components/ui/Footer';
 import { ContainerProjects } from './ContainerProjects';
+import CVModal from '../../components/ui/CVModal';
 
 const roles = ['Full Stack Developer', 'Backend Developer', 'AI Enthusiast'];
 
@@ -20,6 +21,7 @@ const techStack = [
 
 export function Body() {
     const typeRef = useRef(null);
+    const [cvOpen, setCvOpen] = useState(false);
 
     useEffect(() => {
         const el = typeRef.current;
@@ -84,7 +86,7 @@ export function Body() {
 
                     <div className="hero-btns">
                         <a href="#projects" className="btn-primary">View projects</a>
-                        <a href="/cv.pdf" className="btn-ghost" target="_blank" rel="noreferrer">Download CV</a>
+                        <button className="btn-ghost" onClick={() => setCvOpen(true)}>Download CV</button>
                     </div>
                 </div>
 
@@ -130,6 +132,8 @@ export function Body() {
             <ContainerProjects />
 
             <Footer />
+
+            {cvOpen && <CVModal onClose={() => setCvOpen(false)} />}
         </>
     );
 }
