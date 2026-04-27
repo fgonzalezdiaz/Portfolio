@@ -72,8 +72,8 @@ const postCards = [
     {
         id: 'gestia',
         title: 'GestIA',
-        subtitle: 'Legal AI Solutions',
-        desc: 'Building an AI-powered legal management tool. Automating documents, contracts and legal workflows with LLMs.',
+        subtitle: 'Coming soon',
+        desc: "We're currently developing an AI-powered legal tool. Stay tuned.",
         logo: '/LogoGestIA.png',
         accent: '#1a5f8a',
         tags: ['AI', 'LLMs', 'Legal Tech'],
