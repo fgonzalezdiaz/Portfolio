@@ -36,7 +36,7 @@ export function BoxButtons() {
                         <div className="flex w-full max-w-md flex-col gap-6">
                             <Item className='Item'>
                                 <ItemMedia className='ItemMedia'>
-                                    <img src="/linkedin-logo.svg" style={{ width: '40px', height: '40px', color: 'var(--accent-color)' }} alt="LinkedinLogo" />
+                                    <img src="/linkedin-logo.png" style={{ width: '40px', height: '40px', color: 'var(--accent-color)' }} alt="LinkedinLogo" />
                                 </ItemMedia>
                                 <ItemContent>
                                     <ItemTitle style={{ color: 'var(--text-primary)', fontWeight: 'bold' }}>LINKEDIN</ItemTitle>
@@ -51,7 +51,7 @@ export function BoxButtons() {
                         <div className="flex w-full max-w-md flex-col gap-6">
                             <Item className='Item'>
                                 <ItemMedia>
-                                    <img src="/github-logo.svg" style={{ width: '40px', height: '40px', color: 'var(--accent-color)' }} alt="" />
+                                    <img src="/github-logo.png" style={{ width: '40px', height: '40px', color: 'var(--accent-color)' }} alt="" />
                                 </ItemMedia>
                                 <ItemContent>
                                     <ItemTitle style={{ color: 'var(--text-primary)', fontWeight: 'bold' }}>GITHUB</ItemTitle>

@@ -9,7 +9,7 @@ export function Header() {
         <>
             <header className="header">
                 <NavLink to="/" className="header-logo">
-                    fg.dev
+                    Francisco González
                 </NavLink>
 
                 {/* Desktop nav — inside header */}

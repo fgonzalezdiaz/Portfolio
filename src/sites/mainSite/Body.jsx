@@ -81,7 +81,7 @@ export function Body() {
 
                     <p className="hero-desc">
                         21 y/o developer building scalable systems and clean interfaces.
-                        Passionate about data analysis and machine learning.
+                        Passionate about AI and process automation.
                     </p>
 
                     <div className="hero-btns">

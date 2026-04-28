@@ -65,11 +65,11 @@ export function Footer() {
 
                 <div className="contact-links">
                     <a href={GITHUB} target="_blank" rel="noreferrer" className="contact-link">
-                        <img src="/github-logo.svg" alt="GitHub" />
+                        <img src="/github-logo.png" alt="GitHub" />
                         GitHub
                     </a>
                     <a href={LINKEDIN} target="_blank" rel="noreferrer" className="contact-link">
-                        <img src="/linkedin-logo.svg" alt="LinkedIn" />
+                        <img src="/linkedin-logo.png" alt="LinkedIn" />
                         LinkedIn
                     </a>
                 </div>

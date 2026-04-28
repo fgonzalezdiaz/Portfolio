@@ -32,7 +32,7 @@ const skillCategories = [
         id: 'infra',
         label: 'Infra & Tools',
         skills: [
-            { name: 'GitHub', level: 90, logo: '/github-logo.svg'  },
+            { name: 'GitHub', level: 90, logo: '/github-logo.png'  },
             { name: 'MySQL',  level: 72, logo: '/mysql-logo.svg'   },
             { name: 'Docker', level: 60, logo: '/docker-logo.svg'  },
             { name: 'Kotlin', level: 60, logo: '/kotlin-logo.svg'  },

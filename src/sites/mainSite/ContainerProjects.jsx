@@ -76,7 +76,7 @@ function ProjectCard({ project }) {
                     rel="noreferrer"
                     className="proj-github"
                 >
-                    <img src="/github-logo.svg" alt="GitHub" width="16" height="16" />
+                    <img src="/github-logo.png" alt="GitHub" width="16" height="16" />
                 </a>
             </div>
         </div>
