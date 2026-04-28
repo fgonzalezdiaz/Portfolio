@@ -65,7 +65,7 @@ export function InfoBoxVerticalImg({ text, image, gitLink }) {
         <div className='InfoBoxVerticalImg'>
             <img src={image} className='img-InfoBoxXL' alt="Imagen" style={{ marginTop: '20px', marginBottom: '20px' }} />
             <p className='text-InfoBoxXL'>{text}</p>
-            <Link to={gitLink}><InfoBoxMVerticalImg text={<p>Click here to find the repository</p>} image="./public/github-logo.svg" image2="./public/github-logo.svg" /></Link>
+            <Link to={gitLink}><InfoBoxMVerticalImg text={<p>Click here to find the repository</p>} image="/github-logo.svg" image2="/github-logo.svg" /></Link>
         </div>
     )
 }
@@ -75,8 +75,8 @@ export function InfoBoxVerticalImgTwoRepositories({ text, image, gitLink1, gitLi
         <div className='InfoBoxVerticalImg'>
             <img src={image} className='img-InfoBoxXL' alt="Imagen" style={{ marginTop: '20px', marginBottom: '20px' }} />
             <p className='text-InfoBoxXL'>{text}</p>
-            <Link to={gitLink1}><InfoBoxMVerticalImg text={<p>Repository SpringBoot JDCB</p>} image="./public/github-logo.svg" image2="./public/github-logo.svg" /></Link>
-            <Link to={gitLink2}><InfoBoxMVerticalImg text={<p>Repository SpringBoot JPA</p>} image="./public/github-logo.svg" image2="./public/github-logo.svg" /></Link>
+            <Link to={gitLink1}><InfoBoxMVerticalImg text={<p>Repository SpringBoot JDCB</p>} image="/github-logo.svg" image2="/github-logo.svg" /></Link>
+            <Link to={gitLink2}><InfoBoxMVerticalImg text={<p>Repository SpringBoot JPA</p>} image="/github-logo.svg" image2="/github-logo.svg" /></Link>
         </div>
     )
 }
